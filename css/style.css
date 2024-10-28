@@ -21,3 +21,10 @@ footer {
   text-transform: capitalize;
   font-weight: 500;
 }
+td:nth-child(1) {
+  width: 300px;
+}
+td:nth-child(4),
+td:nth-child(5) {
+  width: 200px;
+}
