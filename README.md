@@ -19,4 +19,4 @@ Este é um projeto simples de uma Lojinha Virtual desenvolvido com **HTML**, **C
 
 ---
 
-**Nota**: Este projeto é apenas para fins educacionais e demonstração de habilidades com HTML, CSS, Java
+**Nota**: Este projeto é apenas para fins educacionais e demonstração de habilidades com HTML, CSS, JavaScript e Bootstrap.
