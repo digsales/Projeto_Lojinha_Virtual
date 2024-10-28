@@ -5,7 +5,7 @@ function alterarQtd(produto, acao) {
   const subtotal = document.getElementById(`subtotal`);
 
   switch (acao) {
-    case "adicionar": {
+    case "+": {
       qtd.innerHTML++;
 
       total.innerHTML = (Number(total.innerHTML) + Number(valor.innerHTML)).toFixed(2);
@@ -14,7 +14,7 @@ function alterarQtd(produto, acao) {
 
       break;
     }
-    case "retirar": {
+    case "-": {
       if (qtd.innerHTML > 0) {
         qtd.innerHTML--;
 
