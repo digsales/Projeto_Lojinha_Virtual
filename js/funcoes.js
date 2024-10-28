@@ -10,7 +10,7 @@ function adicionar(produto) {
 
   subtotal.innerHTML = (Number(subtotal.innerHTML) + Number(valor.innerHTML)).toFixed(2);
 }
-function subtrair(produto) {
+function retirar(produto) {
   const qtd = document.getElementById(`qtd_${produto}`);
   const valor = document.getElementById(`valor_${produto}`);
   const total = document.getElementById(`total_${produto}`);
