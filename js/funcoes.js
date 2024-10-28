@@ -1,26 +1,29 @@
-function adicionar(produto) {
+function alterarQtd(produto, acao) {
   const qtd = document.getElementById(`qtd_${produto}`);
   const valor = document.getElementById(`valor_${produto}`);
   const total = document.getElementById(`total_${produto}`);
   const subtotal = document.getElementById(`subtotal`);
 
-  qtd.innerHTML++;
+  switch (acao) {
+    case "adicionar": {
+      qtd.innerHTML++;
 
-  total.innerHTML = (Number(total.innerHTML) + Number(valor.innerHTML)).toFixed(2);
+      total.innerHTML = (Number(total.innerHTML) + Number(valor.innerHTML)).toFixed(2);
 
-  subtotal.innerHTML = (Number(subtotal.innerHTML) + Number(valor.innerHTML)).toFixed(2);
-}
-function retirar(produto) {
-  const qtd = document.getElementById(`qtd_${produto}`);
-  const valor = document.getElementById(`valor_${produto}`);
-  const total = document.getElementById(`total_${produto}`);
-  const subtotal = document.getElementById(`subtotal`);
+      subtotal.innerHTML = (Number(subtotal.innerHTML) + Number(valor.innerHTML)).toFixed(2);
 
-  if (qtd.innerHTML > 0) {
-    qtd.innerHTML--;
+      break;
+    }
+    case "retirar": {
+      if (qtd.innerHTML > 0) {
+        qtd.innerHTML--;
 
-    total.innerHTML = (Number(total.innerHTML) - Number(valor.innerHTML)).toFixed(2);
+        total.innerHTML = (Number(total.innerHTML) - Number(valor.innerHTML)).toFixed(2);
 
-    subtotal.innerHTML = (Number(subtotal.innerHTML) - Number(valor.innerHTML)).toFixed(2);
+        subtotal.innerHTML = (Number(subtotal.innerHTML) - Number(valor.innerHTML)).toFixed(2);
+      }
+
+      break;
+    }
   }
 }
